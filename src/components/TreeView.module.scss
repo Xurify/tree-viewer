@@ -1,0 +1,36 @@
+.treeNode {
+  position: relative;
+  padding-left: 20px;
+}
+
+.treeNode::before,
+.treeNode::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.treeNode::before {
+  border-left: 1px solid #555;
+  height: 100%;
+  top: 0;
+}
+
+.treeNode::after {
+  border-top: 1px solid #555;
+  width: 20px;
+  top: 12px;
+}
+
+.treeNode:first-child::before {
+  border-left: none;
+}
+
+.treeNode:first-child::after {
+  border-top: none;
+  width: 0;
+}
+
+.file {
+  color: #9cdcfe;
+}

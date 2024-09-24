@@ -1,0 +1,23 @@
+.container {
+  padding: 10px 20px;
+}
+
+.container h1 {
+  color: #4ec9b0;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+.important {
+  color: #df4d4d;
+}
+
+.container input[type="file"] {
+  margin-bottom: 20px;
+  background-color: #3c3c3c;
+  color: #d4d4d4;
+  border: 1px solid #555;
+  padding: 5px;
+}

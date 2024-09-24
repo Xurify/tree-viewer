@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #2b2b2b;
+    --foreground: #ededed;
+  }
+}
+
+.folder-icon {
+  svg {
+    fill: #4ec9b0;
+    &:hover {
+      fill: #68ecd2;
+    }
+  }
+}
+
+.moderna {
+  --background: #23262f;
+  --foreground: #ededed;
+  .folder-icon {
+    svg {
+      fill: #56ebf5;
+      &:hover {
+        fill: #7df5fd;
+      }
+    }
+  }
+  .file-icon {
+    svg {
+      fill: #888c96;
+    }
+  }
+  .node-name, .directory-count {
+    color: #ffffff;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: monospace;
+  color: #d4d4d4;
+  line-height: 1.6;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
