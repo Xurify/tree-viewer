@@ -107,7 +107,7 @@ export default function Home() {
       <div className="mt-8 overflow-x-auto">{treeData && <TreeView node={treeData} showIcons={showIcons} />}</div>
       {treeData && (
         <div className="mt-4 text-center">
-          <div className="flex justify-center items-center space-x-2">
+          <div className="space-x-2">
             <span>{counts.directories} directories,</span>
             <span>{counts.files} files</span>
           </div>
