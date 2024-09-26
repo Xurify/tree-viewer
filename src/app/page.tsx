@@ -3,8 +3,6 @@
 import { useState } from "react";
 import TreeView from "../components/TreeView";
 import { Counts, TreeNode, TreeWithCount } from "@/interfaces/entities";
-import { createTreeFromZip } from "@/utils/zip-utils";
-import JSZip from "jszip";
 import { formatSize } from "@/utils/formatters";
 import DragDropArea from "../components/DragDropArea";
 
@@ -31,8 +29,10 @@ export default function Home() {
 
     try {
       if (processMethod === "client") {
+        const JSZip = (await import('jszip')).default;
         const zip = new JSZip();
         const contents = await zip.loadAsync(file);
+        const { createTreeFromZip } = await import('@/utils/zip-utils');
         const jsZipTree = await createTreeFromZip(contents);
         setTreeData(jsZipTree.tree);
         setCounts(jsZipTree.counts);

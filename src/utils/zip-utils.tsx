@@ -1,6 +1,6 @@
 import { TreeNode, TreeWithCount } from "@/interfaces/entities";
 import AdmZip from "adm-zip";
-import JSZip from "jszip";
+import type JSZip from "jszip";
 
 type ZipEntry = {
   name: string;
