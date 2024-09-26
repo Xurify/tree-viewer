@@ -29,10 +29,10 @@ export default function Home() {
 
     try {
       if (processMethod === "client") {
-        const JSZip = (await import('jszip')).default;
+        const JSZip = (await import("jszip")).default;
         const zip = new JSZip();
         const contents = await zip.loadAsync(file);
-        const { createTreeFromZip } = await import('@/utils/zip-utils');
+        const { createTreeFromZip } = await import("@/utils/zip-utils");
         const jsZipTree = await createTreeFromZip(contents);
         setTreeData(jsZipTree.tree);
         setCounts(jsZipTree.counts);
@@ -77,20 +77,24 @@ export default function Home() {
             <DragDropArea onFileDrop={handleFileUpload} accept=".zip" disabled={isLoading} />
           </div>
           <div className="flex items-center justify-center mt-4">
-            <span className="mr-2" title="Offloads processes to the server. No data is stored">
+            <label className="mr-2" htmlFor="server-side" title="Offloads processes to the server. No data is stored on the server">
               Server-side{" "}
-            </span>
+            </label>
             <input
               type="checkbox"
+              id="server-side"
               onChange={handleChangeProcessMethod}
               checked={processMethod === "server"}
               className="form-checkbox h-4 w-4 text-blue-600"
             />
           </div>
           <div className="flex items-center justify-center mt-2">
-            <span className="mr-2">Show Icons</span>
+            <label className="mr-2" htmlFor="show-icons">
+              Show Icons
+            </label>
             <input
               type="checkbox"
+              id="show-icons"
               onChange={handleToggleShowicons}
               checked={showIcons}
               className="form-checkbox h-4 w-4 text-blue-600"
