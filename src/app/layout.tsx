@@ -3,8 +3,8 @@ import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "Tree Viewer",
-  description: "Interactive tree visualization for zip files",
-  keywords: ["tree viewer", "zip file", "file structure", "visualization"],
+  description: "Interactive tree visualization for ZIP files",
+  keywords: ["tree viewer", "ZIP file", "file structure", "visualization"],
   authors: [{ name: "Xurify", url: "https://xurify.com" }],
   creator: "Xurify",
   publisher: "Xurify",
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://your-website-url.com"),
   openGraph: {
-    title: "Tree Viewer - Zip File Visualization",
-    description: "Explore zip file contents with our interactive tree viewer",
+    title: "Tree Viewer - ZIP File Visualization",
+    description: "Explore ZIP file contents with our interactive tree viewer",
     url: "https://your-website-url.com",
     siteName: "Tree Viewer",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tree Viewer - Zip File Visualization",
-    description: "Explore zip file contents with our interactive tree viewer",
+    description: "Explore ZIP file contents with our interactive tree viewer",
     //creator: "@yourtwitterhandle",
     images: ["https://your-website-url.com/twitter-image.jpg"],
   },

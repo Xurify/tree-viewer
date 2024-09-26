@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json(tree);
   } catch (error) {
-    console.error('Error processing zip file:', error);
-    return NextResponse.json({ error: 'Error processing zip file' }, { status: 500 });
+    console.error('Error processing ZIP file:', error);
+    return NextResponse.json({ error: 'Error processing ZIP file' }, { status: 500 });
   }
 }

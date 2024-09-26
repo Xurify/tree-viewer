@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Tree Viewer",
     short_name: "Tree Viewer",
-    description: "Interactive tree visualization for zip files",
+    description: "Interactive tree visualization for ZIP files",
     start_url: "/",
     display: "standalone",
     background_color: "#23262f",
@@ -35,9 +35,9 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     shortcuts: [
       {
-        name: "Analyze Zip",
+        name: "Analyze ZIP",
         short_name: "Upload",
-        description: "Upload a new zip file for visualization",
+        description: "Upload a new ZIP file for visualization",
         url: "/",
         icons: [{ src: "/icons/icon-96x96.png", sizes: "96x96" }]
       }

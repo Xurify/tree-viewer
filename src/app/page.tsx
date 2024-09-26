@@ -46,7 +46,7 @@ export default function Home() {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to process the zip file");
+        throw new Error("Failed to process the ZIP file");
       }
 
       const data: TreeWithCount = await response.json();
@@ -54,7 +54,7 @@ export default function Home() {
       setCounts(data.counts);
     } catch (error) {
       console.error("Error uploading file:", error);
-      setError("Error processing the zip file. Please try again.");
+      setError("Error processing the ZIP file. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -70,7 +70,7 @@ export default function Home() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6 text-center">Zip File Tree Viewer</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">ZIP Tree Viewer</h1>
       {!treeData && (
         <>
           <div className="px-2 md:px-0">
