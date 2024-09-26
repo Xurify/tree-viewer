@@ -86,24 +86,13 @@ const getFileIcon = (fileName: string) => {
 
 const TreeView: React.FC<TreeViewProps> = ({ node, showIcons }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
 
   const handleToggleCollapse = () => setIsCollapsed((prev) => !prev);
-
-  const handleMouseEnter = (e: React.MouseEvent<HTMLSpanElement>) => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = (e: React.MouseEvent<HTMLSpanElement>) => {
-    setIsHovered(false);
-  };
 
   return (
     <div className={`${styles.treeNode} select-none`}>
       <span
         className="flex items-center py-0.5"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         onClick={node.isDirectory ? handleToggleCollapse : undefined}
       >
         {showIcons && (
