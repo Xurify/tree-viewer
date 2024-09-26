@@ -74,10 +74,10 @@ const DragDropArea: React.FC<DragDropAreaProps> = ({ onFileDrop, accept, disable
         <span className="flex items-center justify-center mb-2">
           <ZipFileIcon />
         </span>
-        <p className="mt-1 text-sm text-gray-400">
+        <p className="mt-1 text-sm text-gray-300">
           <span className="font-medium hover:text-blue-400">Click to upload</span> or drag and drop
         </p>
-        <p className="mt-1 text-xs text-gray-500">ZIP files only</p>
+        <p className="mt-1 text-xs text-gray-400">ZIP files only</p>
       </label>
     </div>
   );
