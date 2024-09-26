@@ -1,4 +1,3 @@
-import { RiFileZipLine } from "@remixicon/react";
 import React, { useState, useCallback } from "react";
 import ZipFileIcon from "./ZipFileIcon";
 
