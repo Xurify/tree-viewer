@@ -108,8 +108,7 @@ export default function Home() {
       {treeData && (
         <div className="mt-4 text-center">
           <div className="flex justify-center items-center space-x-2">
-            <span>{counts.directories} directories</span>
-            <span>,</span>
+            <span>{counts.directories} directories,</span>
             <span>{counts.files} files</span>
           </div>
           <div className="mt-1">
