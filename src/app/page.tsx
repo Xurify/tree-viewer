@@ -69,7 +69,7 @@ export default function Home() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="flex flex-col px-4 py-8 min-h-screen">
       <h1 className="text-3xl font-bold mb-6 text-center">ZIP Tree Viewer</h1>
       {!treeData && (
         <>
@@ -104,9 +104,9 @@ export default function Home() {
       )}
       {isLoading && <p className="text-center mt-4">Processing file...</p>}
       {error && <p className="text-red-500 text-center mt-4">{error}</p>}
-      <div className="mt-8 overflow-x-auto">{treeData && <TreeView node={treeData} showIcons={showIcons} />}</div>
+      <div className="mt-6 mb-2 overflow-x-auto min-h-[75vh]">{treeData && <TreeView node={treeData} showIcons={showIcons} />}</div>
       {treeData && (
-        <div className="mt-4 text-center">
+        <div className="mt-4 mt-auto text-center">
           <div className="space-x-2">
             <span>{counts.directories} directories,</span>
             <span>{counts.files} files</span>

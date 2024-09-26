@@ -63,7 +63,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="moderna" lang="en">
-      <body className={`antialiased max-w-3xl mx-auto`}>{children}</body>
+      <body className={`antialiased min-h-screen`}>{children}</body>
     </html>
   );
 }
