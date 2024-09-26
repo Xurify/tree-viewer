@@ -13,15 +13,15 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://your-website-url.com"),
+  metadataBase: new URL("https://ziptreeviewer.vercel.app"),
   openGraph: {
     title: "Tree Viewer - ZIP File Visualization",
     description: "Explore ZIP file contents with our interactive tree viewer",
-    url: "https://your-website-url.com",
+    url: "https://ziptreeviewer.vercel.app",
     siteName: "Tree Viewer",
     images: [
       {
-        url: "https://your-website-url.com/og-image.jpg",
+        url: "https://ziptreeviewer.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Tree Viewer Preview",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Tree Viewer - Zip File Visualization",
     description: "Explore ZIP file contents with our interactive tree viewer",
     //creator: "@yourtwitterhandle",
-    images: ["https://your-website-url.com/twitter-image.jpg"],
+    images: ["https://ziptreeviewer.vercel.app/twitter-image.jpg"],
   },
   category: "Technology",
   // icons: {
