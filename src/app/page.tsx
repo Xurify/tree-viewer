@@ -68,6 +68,8 @@ export default function Home() {
     setShowIcons((prevShowIcons) => !prevShowIcons);
   };
 
+  //TODO: Add compact option - make the screen width narrow
+
   return (
     <div className="flex flex-col px-4 py-8 min-h-screen">
       <h1 className="text-3xl font-bold mb-6 text-center">ZIP Tree Viewer</h1>
@@ -78,7 +80,7 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center mt-4">
             <label className="mr-2" htmlFor="server-side" title="Offloads processes to the server. No data is stored on the server">
-              Server-side{" "}
+              Process Server-side{" "}
             </label>
             <input
               type="checkbox"
