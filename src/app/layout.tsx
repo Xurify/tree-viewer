@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.scss";
 
 export const metadata: Metadata = {
@@ -63,7 +64,10 @@ export default function RootLayout({
 }>) {
   return (
     <html className="moderna" lang="en">
-      <body className={`antialiased min-h-screen`}>{children}</body>
+      <body className={`antialiased min-h-screen`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
