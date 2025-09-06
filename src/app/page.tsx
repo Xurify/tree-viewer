@@ -10,7 +10,9 @@ export default function Home() {
   const [treeData, setTreeData] = useState<TreeNode | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [processMethod, setProcessMethod] = useState<"client" | "server">("client");
+  const [processMethod, setProcessMethod] = useState<"client" | "server">(
+    "client"
+  );
   const [showIcons, setShowIcons] = useState(true);
   const [counts, setCounts] = useState<Counts>({
     directories: 0,
@@ -61,7 +63,9 @@ export default function Home() {
   };
 
   const handleChangeProcessMethod = () => {
-    setProcessMethod((prevProcessMethod) => (prevProcessMethod === "client" ? "server" : "client"));
+    setProcessMethod((prevProcessMethod) =>
+      prevProcessMethod === "client" ? "server" : "client"
+    );
   };
 
   const handleToggleShowicons = () => {
@@ -76,10 +80,18 @@ export default function Home() {
       {!treeData && (
         <>
           <div className="px-2 md:px-0">
-            <DragDropArea onFileDrop={handleFileUpload} accept=".zip" disabled={isLoading} />
+            <DragDropArea
+              onFileDrop={handleFileUpload}
+              accept=".zip"
+              disabled={isLoading}
+            />
           </div>
           <div className="flex items-center justify-center mt-4">
-            <label className="mr-2" htmlFor="server-side" title="Offloads processes to the server. No data is stored on the server">
+            <label
+              className="mr-2"
+              htmlFor="server-side"
+              title="Offloads processes to the server. No data is stored on the server"
+            >
               Process Server-side{" "}
             </label>
             <input
@@ -106,17 +118,22 @@ export default function Home() {
       )}
       {isLoading && <p className="text-center mt-4">Processing file...</p>}
       {error && <p className="text-red-500 text-center mt-4">{error}</p>}
-      <div className="mt-6 mb-2 overflow-x-auto min-h-[75vh]">{treeData && <TreeView node={treeData} showIcons={showIcons} />}</div>
       {treeData && (
-        <div className="mt-4 mt-auto text-center">
-          <div className="space-x-2">
-            <span>{counts.directories} directories,</span>
-            <span>{counts.files} files</span>
+        <>
+          <div className="mt-6 mb-2 overflow-x-auto min-h-[75vh]">
+            <TreeView node={treeData} showIcons={showIcons} />
           </div>
-          <div className="mt-1">
-            total size: {formatSize(counts.totalSize)} ({counts.totalSize} bytes)
+          <div className="text-center">
+            <div className="space-x-2">
+              <span>{counts.directories} directories,</span>
+              <span>{counts.files} files</span>
+            </div>
+            <div className="mt-1">
+              total size: {formatSize(counts.totalSize)} ({counts.totalSize}{" "}
+              bytes)
+            </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );
