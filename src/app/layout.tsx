@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://ziptreeviewer.vercel.app"),
   openGraph: {
-    title: "Tree Viewer - ZIP File Visualization",
-    description: "Explore ZIP file contents with our interactive tree viewer",
+    title: "Tree Viewer",
+    description: "Visualize the contents of a .zip file in a clean tree view",
     url: "https://ziptreeviewer.vercel.app",
     siteName: "Tree Viewer",
     images: [
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tree Viewer - Zip File Visualization",
-    description: "Explore ZIP file contents with our interactive tree viewer",
+    title: "Tree Viewer",
+    description: "Visualize the contents of a .zip file in a clean tree view",
     //creator: "@yourtwitterhandle",
     images: ["https://ziptreeviewer.vercel.app/twitter-image.jpg"],
   },
